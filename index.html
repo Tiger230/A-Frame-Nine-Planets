@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 (8.5) Planets</title>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <!-- Pluto is a dwarf planet. It is too small to be a full planet but too large to be nothing -->
+    <a-scene>
+        <a-assets>
+            <!-- Stars Asset Source: https://www.solarsystemscope.com/textures/download/2k_stars.jpg -->
+            <img id="stars" src="assets/stars.jpg">
+            <!-- Sun Asset Source: https://www.solarsystemscope.com/textures/download/8k_sun.jpg -->
+            <img id="sun" src="assets/sun.jpg">
+            <!-- Mercury Asset Source: https://www.solarsystemscope.com/textures/download/2k_mercury.jpg -->
+            <img id="mercury" src="assets/mercury.jpg">
+            <!-- Venus Asset Source: https://www.solarsystemscope.com/textures/download/2k_venus_atmosphere.jpg -->
+            <img id="venus" src="assets/venus.jpg">
+            <!-- Earth Asset Source: https://www.solarsystemscope.com/textures/download/2k_earth_daymap.jpg -->
+            <img id="earth" src="assets/earth.jpg">
+            <!-- Moon Asset Source: https://www.solarsystemscope.com/textures/download/2k_moon.jpg -->
+            <img id="moon" src="assets/moon.jpg">
+            <!-- Mars Asset Source: https://www.solarsystemscope.com/textures/download/2k_mars.jpg -->
+            <img id="mars" src="assets/mars.jpg">
+            <!-- Jupiter Asset Source: https://www.solarsystemscope.com/textures/download/2k_jupiter.jpg -->
+            <img id="jupiter" src="assets/jupiter.jpg">
+            <!-- Saturn Asset Source: https://www.solarsystemscope.com/textures/download/2k_saturn.jpg -->
+            <img id="saturn" src="assets/saturn.jpg">
+            <!-- Saturn Ring Asset Source: (Slightly modified version of) https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5087affb-58e1-4a81-bc50-8138600a6453/d4xautd-ad5389d8-42e7-4a7f-b237-4257bed7c17d.png/v1/fill/w_800,h_800,strp/saturn_s_rings_stock_image_by_alpha_element_d4xautd-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD04MDAiLCJwYXRoIjoiXC9mXC81MDg3YWZmYi01OGUxLTRhODEtYmM1MC04MTM4NjAwYTY0NTNcL2Q0eGF1dGQtYWQ1Mzg5ZDgtNDJlNy00YTdmLWIyMzctNDI1N2JlZDdjMTdkLnBuZyIsIndpZHRoIjoiPD04MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.nwyApa271U3AhBlyP7H5S8teStE3uCriRvJT6uucLQA -->
+            <img id="saturnRing" src="assets/NewSaturnRing.png">
+            <!-- Uranus Asset Source: https://www.solarsystemscope.com/textures/download/2k_uranus.jpg -->
+            <img id="uranus" src="assets/uranus.jpg">
+            <!-- Neptune Asset Source: https://www.solarsystemscope.com/textures/download/2k_neptune.jpg -->
+            <img id="neptune" src="assets/neptune.jpg">
+            <!-- Pluto Asset Source: https://cdn.glitch.com/d558c128-2ed0-4284-a0da-4d18b9163ad6%2Fplutomap1k.jpg?1541102145905 -->
+            <img id="pluto" src="assets/pluto.jpg">
+        </a-assets>
+
+        <a-sky
+            src="#stars">
+        </a-sky>
+        <!-- Sun -->
+        <a-sphere 
+            src="#sun" 
+            scale="10 10 10"
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:27000; 
+                easing:linear;">
+            <!-- Mercury -->
+        </a-sphere>
+        <a-entity
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:241; 
+                easing:linear;">
+            <a-sphere 
+                src="#mercury" 
+                scale=".33 .33 .33"
+                position="20 0 0"
+                animation="
+                    property:rotation; 
+                    to:0 360 0; 
+                    loop:true; 
+                    dur:59000; 
+                    easing:linear;"></a-sphere>
+        </a-entity>
+        <!-- Venus -->
+        <a-entity
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:845; 
+                easing:linear;">
+            <a-sphere 
+                src="#venus" 
+                scale=".5 .5 .5"
+                position="30 0 0" 
+                animation="
+                    property:rotation; 
+                    to:0 360 0; 
+                    loop:true; 
+                    dur:243000; 
+                    easing:linear;">
+            </a-sphere>
+        </a-entity>
+        <!-- Earth -->
+        <a-entity
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:1000; 
+                easing:linear;">
+            <a-sphere 
+                src="#earth" 
+                position="40 0 0"
+                animation="
+                    property:rotation; 
+                    to:0 360 0; 
+                    loop:true; 
+                    dur:1000; 
+                    easing:linear;">
+                <!-- Moon -->
+                <a-entity
+                    position="0 0 0"
+                    animation="
+                        property:rotation; 
+                        to:0 360 0; 
+                        loop:true; 
+                        dur:27322; 
+                        easing:linear;">
+                    <a-sphere 
+                        src="#moon" 
+                        position="2 0 0"
+                        scale=".1 .1 .1"
+                        animation="
+                            property:rotation; 
+                            to:0 360 0; 
+                            loop:true; 
+                            dur:27.322; 
+                            easing:linear;">
+                    </a-sphere>
+                </a-entity>
+            </a-sphere>
+        </a-entity>
+        <!-- Mars -->
+        <a-entity
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:1882; 
+                easing:linear;">
+            <a-sphere 
+                src="#mars" 
+                scale=".5 .5 .5"
+                position="50 0 0" 
+                animation="
+                    property:rotation; 
+                    to:0 360 0; 
+                    loop:true; 
+                    dur:1020; 
+                    easing:linear;">
+            </a-sphere>
+        </a-entity>
+        <!-- Jupiter -->
+        <a-entity
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:11860; 
+                easing:linear;">
+            <a-sphere 
+                src="#jupiter" 
+                scale="5 5 5"
+                position="70 0 0"
+                animation="
+                    property:rotation; 
+                    to:0 360 0; 
+                    loop:true; 
+                    dur:417; 
+                    easing:linear;">
+            </a-sphere>
+        </a-entity>
+        <!-- Saturn -->
+        <a-entity
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:29000; 
+                easing:linear;">
+            <a-sphere 
+                src="#saturn" 
+                position="85 0 0" 
+                scale="3 3 3"
+                animation="
+                    property:rotation; 
+                    to:0 360 0; 
+                    loop:true; 
+                    dur:444; 
+                    easing:linear;">
+                <!-- Rings -->
+                    <a-ring
+                        src="#saturnRing" 
+                        position="0 0 0"
+                        rotation="-90 0 0"
+                        radius-inner="1.45"
+                        radius-outer="2.25"
+                        animation="
+                            property:rotation; 
+                            to:-90 0 360; 
+                            loop:true; 
+                            dur:444; 
+                            easing:linear;">
+                    </a-ring> 
+                </a-entity>
+            </a-sphere>
+        </a-entity>
+        <!-- Uranus -->
+        <a-entity
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:84000; 
+                easing:linear;">
+            <a-sphere 
+                src="#uranus" 
+                position="100 0 0" 
+                scale="1.5 1.5 1.5"
+                animation="
+                    property:rotation; 
+                    to:360 0 0; 
+                    loop:true; 
+                    dur:719; 
+                    easing:linear;">
+            </a-sphere>
+        </a-entity>
+        <!-- Neptune -->
+        <a-entity
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:165000; 
+                easing:linear;">
+            <a-sphere 
+                src="#neptune" 
+                position="115 0 0"
+                scale="2 2 2"
+                animation="
+                    property:rotation; 
+                    to:0 360 0; 
+                    loop:true; 
+                    dur:671; 
+                    easing:linear;">
+            </a-sphere>
+        </a-entity>
+        <!-- Pluto -->
+        <a-entity
+            position="0 -10 -100"
+            animation="
+                property:rotation; 
+                to:0 360 0; 
+                loop:true; 
+                dur:248000; 
+                easing:linear;">
+            <a-sphere 
+                src="#pluto" 
+                scale=".25 .25 .25"
+                position="150 0 0" 
+                animation="
+                    property:rotation; 
+                    to:0 360 0; 
+                    loop:true; 
+                    dur:6375; 
+                    easing:linear;">
+            </a-sphere>
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
